@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+.table-header {
+  justify-content: space-between;
+  display: flex;
+  background-color: #ffcc00;
+  padding: 0 16px;
+}
+
 .list-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -21,4 +28,8 @@ code {
 
 .btn {
   cursor: pointer;
+}
+
+.btn-add {
+  color: var(--secondary);
 }

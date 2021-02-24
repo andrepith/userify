@@ -13,6 +13,8 @@ const Userify = ({ getEmployeeAction, employeeList }) => {
     }
   };
 
+  const createUser = () => {};
+
   const handleEdit = () => {};
 
   const handleRemove = () => {};
@@ -22,21 +24,24 @@ const Userify = ({ getEmployeeAction, employeeList }) => {
   }, []);
 
   return (
-    <>
-      <div className="table-header">
+    <div>
+      <div className="table-header mt-4">
         <h1>User Management</h1>
-        <div className="list-items p-4">
-          {!!employeeList.length &&
-            employeeList.map((item, key) => (
-              <Card
-                {...item}
-                handleEdit={handleEdit}
-                handleRemove={handleRemove}
-              />
-            ))}
+        <div className="my-auto card btn btn-add" onClick={createUser}>
+          Add new user
         </div>
       </div>
-    </>
+      <div className="list-items p-4">
+        {!!employeeList.length &&
+          employeeList.map((item, key) => (
+            <Card
+              {...item}
+              handleEdit={handleEdit}
+              handleRemove={handleRemove}
+            />
+          ))}
+      </div>
+    </div>
   );
 };
 
