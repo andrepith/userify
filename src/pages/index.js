@@ -30,7 +30,8 @@ const Userify = ({ getEmployeeAction, employeeList }) => {
     closeModal();
   };
 
-  const handleEditUser = () => {
+  const handleEditUser = (data) => {
+    employeeApi.updateEmployee(data, data.id).then(() => fetchData());
     closeModal();
   };
 
